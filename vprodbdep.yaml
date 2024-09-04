@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: vprodb
-        image: miro0o96/db:latest
+        image: miro0o96/db:v1
         volumeMounts:
           - mountPath: /var/lib/mysql
             name: vpro-db-data
