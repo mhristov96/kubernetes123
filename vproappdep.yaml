@@ -5,10 +5,10 @@ metadata:
   labels:
     app: vproapp
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: vproapp
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vproapp
-          image: miro0o96/app:v2
+          image: miro0o96/vprofileapp
           ports:
             - name: vproapp-port
               containerPort: 8080
