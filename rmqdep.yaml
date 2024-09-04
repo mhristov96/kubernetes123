@@ -10,18 +10,18 @@ spec:
   template:
     matchLabels:
       app: rmq01
-      spec:
-        containers:
-          - name: vprormq01
-            image: rabbitmq
-            ports:
-              - name: vpromq01-port
-                containerPort: 15672
-            env:
-              - name: RABBITMQ_DEFFAULT_PASS
-                valueFrom:
-                  secretKeyRef:
-                    name: app-secret
-                    key: rmq-pass
-              - name: RABBITMQ_DEFFAULT_USER
-                value: "guest"
+    spec:
+      containers:
+        - name: vprormq01
+          image: rabbitmq
+          ports:
+            - name: vpromq01-port
+              containerPort: 15672
+          env:
+            - name: RABBITMQ_DEFFAULT_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: rmq-pass
+            - name: RABBITMQ_DEFFAULT_USER
+              value: "guest"
