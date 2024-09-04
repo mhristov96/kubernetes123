@@ -8,8 +8,9 @@ spec:
       app: rmq01
   replicas: 1
   template:
-    matchLabels:
-      app: rmq01
+    metadata:
+      labels:
+        app: rmq01
     spec:
       containers:
         - name: vprormq01
